@@ -19,7 +19,7 @@
         echo "
         <style>
         body.login #login h1 a {
-            background: url('/wp-content/themes/toshibot/login-logo.png') no-repeat scroll center top transparent !important;
+            background: url('/wp-content/themes/toshibot/img/login-logo.png') no-repeat scroll center top transparent !important;
             height: 128px;
             width: 128px;
             margin-bottom: 50px;

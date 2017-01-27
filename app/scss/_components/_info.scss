@@ -1,0 +1,55 @@
+.c-info {
+	width: 605px;
+	margin: 100px auto 0;
+
+	@media (max-width: $break-s) {
+		height: auto;
+		width: 100%;
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	&--alternate {
+		// This is lazy and should never happen again
+
+		.c-date {
+			&__day {
+
+			}
+
+			&__year {
+				font-size: 100px;
+				display: inline-block;
+			}
+		}
+
+		.c-info {
+
+			&__container {
+				text-align: center;
+
+				h3 {
+					margin-bottom: $base;
+				}
+			}
+		}
+	}
+
+	&__container {
+		padding: 33px 0 0;
+		text-align: left;
+
+		@media (max-width: $break-s) {
+			text-align: center;
+		}
+
+		h3 {
+			font-size: 36px;
+		}
+
+		p {
+			font-size: 22px;
+			line-height: 22px;
+		}
+	}
+}

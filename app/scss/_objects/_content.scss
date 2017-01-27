@@ -1,0 +1,126 @@
+.o-content {
+	width: 980px;
+	margin: 0 auto;
+	color: $brown-dark;
+	@include borderBox;
+
+	@media (max-width: $break-s) {
+		padding: 0 $base;
+	}
+
+	h1 {
+		font-size: 32px;
+		font-family: $heading;
+		font-weight: 600;
+		line-height: $base-lg;
+		margin-bottom: $base-xs;
+
+		@media (max-width: $break-s) {
+			line-height: 35px;
+		}
+	}
+
+	h2 {
+		font-family: $balboa;
+		font-size: 75px;
+		text-transform: uppercase;
+		font-weight: 400;
+		line-height: $base;
+		margin-bottom: $base;
+
+		@media (max-width: $break-s) {
+			line-height: 35px;
+
+			&.country {
+				line-height: $base-lg;
+			}
+		}
+	}
+
+	h3 {
+		font-family: $eloquent;
+	}
+	
+	p {
+		font-family: $body-font;
+		line-height: $base;
+		margin-bottom: $base;
+	}
+
+	a,
+	a:link,
+	a:visited {
+		color: $blue;
+		@include transition(0.3s);
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	@media (max-width: $break-s) {
+		width: 100%;
+		padding-top: 0;
+	}
+
+	&--center {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	p-500 {
+		max-width: 500px;
+	}
+
+	&--alt-heading {
+		text-transform: none !important;
+		font-family: $script !important;
+		margin-bottom: 0 !important;	
+		height: $base-lg*2;
+		line-height: $base-lg*2+$base !important;
+
+		@media (max-width: $break-s) {
+			line-height: $base-lg+$base !important;
+			font-size: 50px !important;
+			height: auto !important;
+		}
+
+		@media (max-width: $break-xs) {
+			line-height: $base-lg !important;
+		}
+	}
+
+	&--white {
+		background: $white;
+		padding: $base-lg $base;
+		margin-top: $base-lg;
+		@include transition(0.3s);
+		@include boxShadow(5, $black);
+
+		&:hover {
+			@include boxShadow(9, $black);
+		}
+	}
+
+	&--dark {
+
+		h1, h2, h3 {
+			color: $white;
+			line-height: 32px;
+		}
+
+		a,
+		a:link,
+		a:visited {
+			color: rgba($white, 0.5);
+
+			&:hover {
+				color: $white;
+			}
+		}
+
+		@media (max-width: $break-s) {
+			padding: $base 15px;
+		}
+	}
+}

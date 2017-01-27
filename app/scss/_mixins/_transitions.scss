@@ -1,0 +1,8 @@
+
+// Transitions
+@mixin transition($time) {
+	transition: all $time ease-out;
+	-webkit-transition: all $time ease-out;
+	-moz-transition: all $time ease-out;
+	-o-transition: all $time ease-out;
+}

@@ -1,0 +1,30 @@
+
+// Cosmetic Mixins
+
+// Box Shadow
+@mixin boxShadow($i, $color) {
+	-webkit-box-shadow: 0px $i+px $i*2+px 1px rgba($color,0.3);
+	-moz-box-shadow: 0px $i+px $i*2+px 1px rgba($color,0.3);
+	box-shadow: 0px $i+px $i*2+px 1px rgba($color,0.3);
+}
+
+// Border Radius
+@mixin borderRadius($i) {
+	-webkit-border-radius: $i;
+	-moz-border-radius: $i;
+	border-radius: $i;
+}
+
+// Box Sizing
+@mixin borderBox() {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// Breakpoint 100% Width
+@mixin breakFull($i) {
+	@media (max-width: $i) {
+		width: 100%;
+	}
+}

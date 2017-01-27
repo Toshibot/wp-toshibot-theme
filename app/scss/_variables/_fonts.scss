@@ -1,0 +1,20 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed';
+
+@font-face {
+  font-family: 'Font Awesome';
+  src: url("../fonts/fontawesome-webfont.eot");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), 
+  	   url("../fonts/fontawesome-webfont.woff") format("woff"), 
+  	   url("../fonts/fontawesome-webfont.ttf") format("truetype"), 
+  	   url("../fonts/fontawesome-webfont.svg#Body") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$body-font: 'adelle', serif;
+$heading: 'eloquent-jf-pro', Georgia, Times, 'Times New Roman', serif;
+$heading-s: 'balboa-extra-condensed', 'Roboto Condensed', sans-serif;
+
+$eloquent: 'eloquent-jf-pro', sans-serif;
+$balboa: 'balboa-extra-condensed', 'Roboto Condensed', sans-serif;
+$script: 'corner-store-jf', serif;

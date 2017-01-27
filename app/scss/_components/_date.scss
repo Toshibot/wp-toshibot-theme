@@ -1,0 +1,49 @@
+.c-date {
+	width: 240px;
+	float: left;
+	padding: $base 0;
+
+	@media (max-width: $break-s) {
+		float: none;
+		margin: 0 auto;
+	}
+
+	&__day {
+		font-family: $body-font;
+		text-transform: uppercase;
+		height: 42px;
+		line-height: 42px;
+		vertical-align: bottom;
+		float: none;
+		font-size: 42px;
+		display: block;
+
+		@media (max-width: $break-s) {
+			height: auto;
+		}
+	}
+
+	&__date {
+		font-family: $eloquent;
+		font-size: 100px;
+		display: inline-block;
+	}
+
+	div {
+		display: inline-block;
+	}
+
+	&__month {
+		font-family: $eloquent;
+		font-size: 40px;
+		text-transform: uppercase;
+		display: block;
+		padding-bottom: 10px;
+	}
+
+	&__year {
+		font-family: $eloquent;
+		font-size: 40px;
+		display: block;
+	}
+}

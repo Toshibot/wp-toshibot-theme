@@ -1,0 +1,44 @@
+.o-divider {
+	
+	&--dotted {
+		height: 10px;
+		width: 100%;
+		margin: $base-s 0 $base;
+		background: url('../img/dotted-line.png') repeat-x transparent;
+		background-size: 41px 21px;
+
+		@media (-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi) {
+			background-image: url('../img/dotted-line-2x.png');
+		}
+	}
+
+	&--deco {
+		background: url('../img/divider-deco.png') no-repeat center center transparent;
+		height: $base;
+		width: 100%;
+		margin: $base 0;
+
+		@media (-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi) {
+			background-image: url('../img/divider-deco-2x.png') no-repeat center center transparent;
+		}
+
+		@media (max-width: $break-s) {
+			margin: $base-s 0;
+		}
+	}
+
+	&--vertical {
+		width: 5px;
+		background: $brown-dark;
+		height: 225px;
+		display: inline-block;
+		float: left; // Ignore linting
+		margin: 0 $base;
+
+		@media (max-width: $break-s) {
+			display: none;
+		}
+	}
+}

@@ -24,7 +24,7 @@
 	}
 
 	&__date {
-		font-family: $eloquent;
+		font-family: $body-font;
 		font-size: 100px;
 		display: inline-block;
 	}
@@ -34,7 +34,7 @@
 	}
 
 	&__month {
-		font-family: $eloquent;
+		font-family: $body-font;
 		font-size: 40px;
 		text-transform: uppercase;
 		display: block;
@@ -42,7 +42,7 @@
 	}
 
 	&__year {
-		font-family: $eloquent;
+		font-family: $body-font;
 		font-size: 40px;
 		display: block;
 	}

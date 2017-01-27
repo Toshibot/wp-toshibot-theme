@@ -21,7 +21,7 @@
 	}
 
 	h2 {
-		font-family: $balboa;
+		font-family: $heading;
 		font-size: 75px;
 		text-transform: uppercase;
 		font-weight: 400;
@@ -38,7 +38,7 @@
 	}
 
 	h3 {
-		font-family: $eloquent;
+		font-family: $body-font;
 	}
 	
 	p {
@@ -74,7 +74,7 @@
 
 	&--alt-heading {
 		text-transform: none !important;
-		font-family: $script !important;
+		font-family: $heading !important;
 		margin-bottom: 0 !important;	
 		height: $base-lg*2;
 		line-height: $base-lg*2+$base !important;

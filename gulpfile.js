@@ -123,6 +123,12 @@ gulp.task('html', function() {
         .pipe(gulp.dest('dist'));
 });
 
+// Template parts
+gulp.task('template-parts', function(){
+    return gulp.src(['app/template-parts/**/*'])
+        .pipe(gulp.dest('dist/template-parts'))
+});
+
 // Copy Images to 'dist'
 gulp.task('images', function() {
     return gulp.src('app/img/**/*')
@@ -137,7 +143,7 @@ gulp.task('icons', function() {
 
 // Migration Sequence
 gulp.task('migrate-assets', function(callback) {
-    runSequence('fonts', 'html', 'images', 'icons', callback);
+    runSequence('fonts', 'html', 'template-parts', 'images', 'icons', callback);
 });
 
 //
@@ -161,7 +167,7 @@ gulp.task('default', ['global-build-sequence'], function() {
     gulp.watch('app/js/**/*.js', ['build-js']);
 
     // Watch HTML, HTM and PHP files for Changes
-    gulp.watch('app/*.{html,htm,php}', ['html']);
+    gulp.watch('app/*.{html,htm,php,png,css}', ['html']);
 
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('dist/css/*.css', browserSync.reload);

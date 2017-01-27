@@ -20,6 +20,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <!--Google Fonts-->
 <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:700" rel="stylesheet">
+<!--Google Code Prettify-->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.css">
 <?php wp_head(); ?>
 </head>
 

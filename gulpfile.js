@@ -64,7 +64,7 @@ gulp.task('minify-css', function() {
 
 // Migrate CSS Plugins
 gulp.task('css-plugins', function() {
-    return gulp.src('app/css/plugins/*.css')
+    return gulp.src('app/css/plugins/**/*.css')
         .pipe(gulp.dest('dist/css/plugins'))
 });
 

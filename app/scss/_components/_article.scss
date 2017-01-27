@@ -20,8 +20,22 @@
 
 .entry-content {
 
+    h2 {
+        margin: $base 0 $base-s;
+    }
+
     p {
         font-size: 16px;
         line-height: $base;
+    }
+
+    pre {
+        padding: 15px;
+        margin-bottom: $base-s;
+        color: $white;
+        font-family: monospace;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 1.4;
     }
 }

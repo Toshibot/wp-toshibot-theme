@@ -365,3 +365,8 @@ body {
   line-height: 25px; }
   .comment-form .comment-form-comment label {
     line-height: 25px; }
+
+.custom-header {
+  max-height: 400px; }
+  .custom-header-media {
+    max-height: 400px !important; }

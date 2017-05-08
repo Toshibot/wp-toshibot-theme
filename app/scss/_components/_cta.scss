@@ -1,0 +1,72 @@
+//
+// In Article CTAs
+// ==========================================================================
+
+.post-cta {
+    background: transparent;
+    border-top: 1px solid $grey;
+    margin-top: $base;
+    padding-top: $base-lg;
+
+    img {
+        -webkit-backface-visibility: hidden;
+        -webkit-transition: opacity 0.2s;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &-content {
+        padding: $base 0 $base-lg;
+
+        h2 {
+            @include transition(0.3s);
+            font-size: 24px;
+            line-height: $base+10px;
+            color: $black;
+            margin-bottom: $base;
+
+            &:hover {
+                color: #000;
+                -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+                box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+            }
+        }
+
+        p {
+            line-height: $base;
+            margin-bottom: $base;
+        }
+    }
+
+    &__article {
+        margin-top: $base;
+        padding: $base-lg 0 0;
+        border-top: 1px solid #eee;
+    }
+
+    &__button {
+        @include borderRadius(0);
+        @include transition(0.3s);
+        padding: 0;
+        font-size: 14px;
+        color: $black;
+        background: transparent;
+        font-weight: 800;
+
+        &:after {
+            content: "\f178";
+            padding-left: 5px;
+            font-family: "Font Awesome";
+        }
+        
+        &:hover {
+            background: transparent;
+            color: #000;
+            -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+            box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+        }
+    }
+}

@@ -1,0 +1,20 @@
+// ==========================================================================
+// Button
+// ==========================================================================
+
+button, input[type="button"], 
+input[type="reset"], 
+input[type="submit"], 
+.comment-form .form-submit input[type="submit"]  {
+    background: $blue;
+    background-color: $blue;
+
+    &:hover, 
+    &:active, 
+    &:focus {
+        background: $black;
+    }
+}
+
+
+

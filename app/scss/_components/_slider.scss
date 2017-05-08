@@ -1,0 +1,68 @@
+// ==========================================================================
+// Slider
+// ==========================================================================
+
+.bloger-slider-wrapper {
+
+    .home_slider_header {
+
+        .slider_contents_wrap {
+
+            .owl_slider {
+
+                &_title {
+                    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+                }
+
+                &_content {
+                    font-family: $heading;
+                    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+                }
+
+                &_date {
+                    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+                }
+            }
+        }
+
+        .owl-controls {
+
+            .owl-dots {
+
+                .owl-dot {
+
+                    span {
+                        background: $offwhite;
+                    }
+
+                    &.active span {
+                        background: $blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.owl-carousel {
+
+    .owl-item {
+        background: $white;
+
+        .item {
+            .owl_slider_image {
+                opacity: 0.2;
+            }
+        }
+
+        &.active {
+            background: $black;
+
+            .item {
+                .owl_slider_image {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}

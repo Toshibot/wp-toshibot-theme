@@ -1,4 +1,3 @@
-
 // ==========================================================================
 // Articles
 // ==========================================================================
@@ -7,10 +6,42 @@
 // Headings
 // ==========================================================================
 
-.entry-header {
+.fullwidth-sidebar-home #primary article a.bloger_post_title, .fullwidth-sidebar-home .widget-title, .fullwidth-sidebar-category-page #primary article a.bloger_post_title, .fullwidth-sidebar-category-page .widget-title, .fullwidth-sidebar-single-page #primary article a.bloger_post_title, .fullwidth-sidebar-single-page .widget-title, .entry-title, h1.entry-title, .search.search-results h1.page-title {
+    font-family: $heading;
+}
 
-    .entry-title {
-            font-size: 2rem;
+#primary article .title_cat_wrap .bloger_post_title {
+    font-family: $heading;
+}
+
+#primary article .title_cat_wrap .bloger_post_title {
+    &:hover {
+        color: $blue;
+    }
+}
+
+//
+// Meta
+// ==========================================================================
+
+#primary article .date_comment_author {
+    font-family: $body-font;
+    font-weight: 300;
+    letter-spacing: 0.5ch;
+    text-transform: uppercase;
+
+    .wrap11 {
+        font-style: normal;
+    }
+}
+
+#primary article .title_cat_wrap .bloger_cat {
+    &:hover {
+        color: $blue;
+
+        &:before {
+            background-color: $blue;
+        }
     }
 }
 
@@ -18,24 +49,36 @@
 // Content
 // ==========================================================================
 
-.entry-content {
+.fullwidth-sidebar-single-page_page, .fullwidth-single-page_page {
+    margin-top: 0;
+}
 
-    h2 {
-        margin: $base 0 $base-s;
-    }
+#primary article .excerpt_post_content {
+    font-family: $body-font;
 
     p {
-        font-size: 16px;
-        line-height: $base;
+        margin-bottom: $base;
     }
 
-    pre {
-        padding: 15px;
-        margin-bottom: $base-s;
-        color: $white;
-        font-family: monospace;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 1.4;
+    img {
+        margin: $base 0;
     }
+}
+
+// Read More
+#primary article .read_more_share a.continue_link {
+    &:hover {
+        color: $blue;
+    }
+}
+
+//
+// Sharing
+// ==========================================================================
+
+div.sharedaddy h3.sd-title {
+    font-family: $body-font;
+    font-weight: 400 !important;
+    color: $grey;
+    padding-top: $base;
 }

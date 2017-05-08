@@ -1,0 +1,27 @@
+// ==========================================================================
+// Related Posts Widget
+// ==========================================================================
+
+.footer_layer_two {
+
+    .widget_bloger_recent_posts {
+
+        .recent-post-wrap {
+
+            .recent-post-content {
+
+                .date_recent_post {
+                    font-weight: 300;
+                    color: #777;
+
+                    &:before {
+                        content: '|';
+                        padding: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+

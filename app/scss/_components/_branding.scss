@@ -1,0 +1,39 @@
+// ==========================================================================
+// Branding
+// ==========================================================================
+
+//
+// Header Logo
+// ==========================================================================
+
+.header-logo-container {
+    max-height: $header-height;
+    max-width: 1170px;
+    margin: 0 auto $base-lg;
+    overflow: hidden;
+
+    .site-title {
+        color: $white;
+        font-size: 56px;
+        font-family: $heading;
+        padding-bottom: $base-s;
+        border-bottom: 2px solid $blue;
+        width: auto;
+        margin: 0;
+        line-height: 1;
+
+        &:hover, a:hover {
+            color: $white;
+            letter-spacing: 3px;
+        }
+    }
+
+    .site-description {
+        font-family: $heading-s;
+        color: $white;
+        text-transform: uppercase;
+        line-height: $base;
+        padding-top: $base-s+2px;
+        margin: 0;
+    }
+}

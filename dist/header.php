@@ -1,57 +1,91 @@
 <?php
 /**
- * The header for our theme
+ * The header for our theme.
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * Displays all of the <head> section and everything up till <div id="content">
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
+ * @package bloger Lite
  */
 
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js no-svg">
+<html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<!--Google Fonts-->
-<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Montserrat:700" rel="stylesheet">
-<!--Google Code Prettify-->
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.css">
-<?php wp_head(); ?>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Google Code Prettify-->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.css">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen' ); ?></a>
-
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bloger' ); ?></a>
+    
 	<header id="masthead" class="site-header" role="banner">
+    <div class="header_social_search_wrap clearfix">
+        <div class="bloger-wrapper">
+                <div class="header_social_search_wrap_second">
+                    <?php $bloger_header_social_link = get_theme_mod('bloger_header_social_icon_enable'); 
+                    if($bloger_header_social_link){ ?>
+                    <div class="header_social_icon">
+                        <?php do_action('bloger_header_footer_social_link_action'); ?>
+                        
+                    </div>
+                    <?php } ?>
+                    <div class="header_login_wrap">
+                        <?php
+                            $user_id = wp_get_current_user();
 
-		<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+                            if ($user_id->ID == 0) {
+                                echo '<a href="/wp-login">Login</a>';
+                            } else {
+                                echo 'Logged in as: '.$user_id->display_name;
+                            }
+                        ?>
+                    </div>
+                    <div class="search_header">
+                        <div class="search_form_wrap">
+                            <?php echo get_search_form(); ?> 
+                        </div>
+                    </div>
+                </div>
+        </div>
+         </div>
+       
+       <?php do_action('bloger_action_custom_logo'); ?>
 
-		<?php if ( has_nav_menu( 'top' ) ) : ?>
-			<div class="navigation-top">
-				<div class="wrap">
-					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-				</div><!-- .wrap -->
-			</div><!-- .navigation-top -->
-		<?php endif; ?>
+</header><!-- #masthead -->
 
-	</header><!-- #masthead -->
+<nav id="site-navigation" class="main-navigation" role="navigation">
+    <div class="bloger-wrapper">
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '', 'bloger' ); ?>
+            <span class="menu-bar-wrap">
+                <span class="menu-bar"></span>
+                <span class="menu-bar bar-middle"></span>
+                <span class="menu-bar"></span>
+            </span>
+        </button>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+    </div>
+</nav><!-- #site-navigation -->
 
-	<?php
-	// If a regular post or page, and not the front page, show the featured image.
-	if ( has_post_thumbnail() && ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) ) :
-		echo '<div class="single-featured-image-header">';
-		the_post_thumbnail( 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
 
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
+<div id="content" class="site-content">
+
+    <!-- slider section -->
+    <?php
+    
+    if(is_home() || is_front_page() ):
+    $bloger_slider_cat = get_theme_mod('bloger_slider_category');
+    $bloger_slider_enable = get_theme_mod('bloger_slider_enable');
+    if($bloger_slider_enable || $bloger_slider_cat){ ?>
+        <div class="bloger-slider-wrapper">
+            <div class="bloger-container">
+                <?php do_action('bloger_home_slider'); ?>
+            </div>
+        </div>
+    <?php }
+    endif; ?>
+

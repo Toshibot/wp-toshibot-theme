@@ -1,0 +1,49 @@
+// ==========================================================================
+// Sidebar
+// ==========================================================================
+
+.secondary {
+
+    .widget-title {
+        span {
+            font-family: $heading;
+        }
+    }
+
+//
+// Recent Articles
+// ==========================================================================
+
+    .recent-post {
+
+        &-wrap {
+
+            .recent-post-title-widget {
+                font-family: $heading-s;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+
+            .date_recent_post {
+                font-family: $body-font;
+                font-weight: 300;
+                letter-spacing: 0.3ch;
+                text-transform: uppercase;
+                font-style: normal;
+            }
+        }
+    }
+
+//
+// 
+// ==========================================================================
+
+    .widget_mo_openid_sharing_hor_wid {
+        p {
+            margin-bottom: $base !important;
+        }
+    }
+
+} // .secondary end

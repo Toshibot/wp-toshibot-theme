@@ -1,15 +1,26 @@
 
 @font-face {
   font-family: 'Font Awesome';
-  src: url("../fonts/fontawesome-webfont.eot");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), 
-  	   url("../fonts/fontawesome-webfont.woff") format("woff"), 
-  	   url("../fonts/fontawesome-webfont.ttf") format("truetype"), 
-  	   url("../fonts/fontawesome-webfont.svg#Body") format("svg");
+  src: url("fonts/fontawesome-webfont.eot");
+  src: url("fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), 
+  	   url("fonts/fontawesome-webfont.woff") format("woff"), 
+  	   url("fonts/fontawesome-webfont.ttf") format("truetype"), 
+  	   url("fonts/fontawesome-webfont.svg#Body") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-$body-font: 'Lato', sans-serif;
-$heading: 'Montserrat', sans-serif;
-$heading-s: 'Montserrat', sans-serif;
+@font-face {
+  font-family: 'Tex Gyre Schola Web';
+  src: url("fonts/texgyreschola-regular-webfont.eot");
+  src: url("fonts/texgyreschola-regular-webfont.eot?#iefix") format("embedded-opentype"),
+       url("fonts/texgyreschola-regular-webfont.woff") format("woff"),
+       url("fonts/texgyreschola-regular-webfont.ttf") format("truetype"),
+       url("fonts/texgyreschola-regular-webfont.svg#Body") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+$body-font: 'Helvetica Neue', 'Helvetica', 'Lato', sans-serif;
+$heading: 'Century Schoolbook', 'TeX Gyre Schola', 'TeX Gyre Schola Web', 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+$heading-s: 'Helvetica Neue Condensed', 'Roboto Condensed', sans-serif;

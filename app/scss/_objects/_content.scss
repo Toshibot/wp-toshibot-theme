@@ -1,126 +1,56 @@
-.o-content {
-	width: 980px;
-	margin: 0 auto;
-	color: $brown-dark;
-	@include borderBox;
+// ==========================================================================
+// Content
+// ==========================================================================
 
-	@media (max-width: $break-s) {
-		padding: 0 $base;
-	}
+//
+// Headings
+// ==========================================================================
 
-	h1 {
-		font-size: 32px;
-		font-family: $heading;
-		font-weight: 600;
-		line-height: $base-lg;
-		margin-bottom: $base-xs;
+h1, h2, h3 {
+	font-family: $heading;
+	font-weight: 400;
+	line-height: 1.2;
+}
 
-		@media (max-width: $break-s) {
-			line-height: 35px;
-		}
-	}
+h3, h4 {
+	font-family: $heading-s;
+	font-weight: 400;
+	line-height: 1.2;
+}
 
-	h2 {
-		font-family: $heading;
-		font-size: 75px;
-		text-transform: uppercase;
-		font-weight: 400;
-		line-height: $base;
-		margin-bottom: $base;
+h5, h6 {
+	font-family: $body-font;
+	font-weight: 700;
+	line-height: 1.2;
+}
 
-		@media (max-width: $break-s) {
-			line-height: 35px;
+//
+// Quotes
+// ==========================================================================
 
-			&.country {
-				line-height: $base-lg;
-			}
-		}
-	}
+blockquote {
+	background: $offwhite;
+	border-left: 3px solid $blue;
+	margin: $base 0;
+	padding: $base;
+	font-style: italic;
 
-	h3 {
-		font-family: $body-font;
-	}
-	
 	p {
-		font-family: $body-font;
-		line-height: $base;
-		margin-bottom: $base;
+		margin: 0 !important;
+		font-weight: 300;
+		letter-spacing: 1px;
 	}
 
-	a,
-	a:link,
-	a:visited {
-		color: $blue;
-		@include transition(0.3s);
-
-		&:hover {
-			text-decoration: none;
-		}
+	:before {
+		content: "",
+		// font-family: 'Font Awesome', sans-serif;
 	}
+}
 
-	@media (max-width: $break-s) {
-		width: 100%;
-		padding-top: 0;
-	}
+//
+// Links
+// ==========================================================================
 
-	&--center {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	p-500 {
-		max-width: 500px;
-	}
-
-	&--alt-heading {
-		text-transform: none !important;
-		font-family: $heading !important;
-		margin-bottom: 0 !important;	
-		height: $base-lg*2;
-		line-height: $base-lg*2+$base !important;
-
-		@media (max-width: $break-s) {
-			line-height: $base-lg+$base !important;
-			font-size: 50px !important;
-			height: auto !important;
-		}
-
-		@media (max-width: $break-xs) {
-			line-height: $base-lg !important;
-		}
-	}
-
-	&--white {
-		background: $white;
-		padding: $base-lg $base;
-		margin-top: $base-lg;
-		@include transition(0.3s);
-		@include boxShadow(5, $black);
-
-		&:hover {
-			@include boxShadow(9, $black);
-		}
-	}
-
-	&--dark {
-
-		h1, h2, h3 {
-			color: $white;
-			line-height: 32px;
-		}
-
-		a,
-		a:link,
-		a:visited {
-			color: rgba($white, 0.5);
-
-			&:hover {
-				color: $white;
-			}
-		}
-
-		@media (max-width: $break-s) {
-			padding: $base 15px;
-		}
-	}
+a:hover, a:focus, a:active {
+	color: $blue;
 }

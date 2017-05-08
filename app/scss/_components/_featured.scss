@@ -1,0 +1,65 @@
+// ==========================================================================
+// Featured Article
+// ==========================================================================
+
+//
+// Homepage
+// ==========================================================================
+
+.home_feature_post_wrap {
+    // padding: 0 10px;
+
+    .feature_post {
+    
+        &_contents {
+            background: $white;
+            width: 100%;
+            border: 1px solid $grey-light;
+            @include transition(0.4s);
+
+            &:hover {
+                letter-spacing: 1px;
+            }
+
+            .title_content_wrap {
+                text-align: center;
+
+                .title_content_wrap_second {
+                    left: 43%;
+                    top: $base*3;
+                    color: $black;
+
+                    &:after {
+                        content: 'Read More >';
+                        width: 100%;
+                        display: block;
+                        position: absolute;
+                        bottom: $base;
+                    }
+
+                    .feature_post_title {
+                        font-family: $heading;
+                        text-transform: none;
+                        font-size: 28px;
+                        line-height: 1;
+                        font-weight: 400;
+                        margin-bottom: $base;
+                    }
+                }
+            }
+
+            &:after {
+                background: transparent;
+            }
+        }
+
+        &_image {
+            width: 40%;
+            margin-bottom: -5px;
+        }
+    }
+}
+
+.home_feature_post_wrap .feature_post_contents {
+    margin: $base 0;
+}

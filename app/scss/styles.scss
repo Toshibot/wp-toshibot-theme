@@ -1,3 +1,8 @@
+// Skin ID 
+@import '_utilities/_skin-info.scss';
+
+// Plugins
+@import '_utilities/_plugins.scss';
 
 // Variables
 @import '_variables/_base.scss';
@@ -18,18 +23,25 @@
 
 // Objects
 @import '_objects/_body.scss';
-@import '_objects/_inline.scss';
-@import '_objects/_section.scss';
-@import '_objects/_width.scss';
 @import '_objects/_content.scss';
-@import '_objects/_logo.scss';
-@import '_objects/_shape.scss';
-@import '_objects/_divider.scss';
-@import '_objects/_bullet.scss';
+@import '_objects/_sidebar.scss';
+@import '_objects/_wrap.scss';
 
 // Components
-@import '_components/_date.scss';
-@import '_components/_info.scss';
-@import '_components/_slideshow.scss';
 @import '_components/_article.scss';
 @import '_components/_comments.scss';
+@import '_components/_header.scss';
+@import '_components/_sidebar.scss';
+@import '_components/_page.scss';
+@import '_components/_nav.scss';
+@import '_components/_branding.scss';
+@import '_components/_button.scss';
+@import '_components/_monash-m.scss';
+@import '_components/_cta.scss';
+@import '_components/_registration-form.scss';
+@import '_components/_featured.scss';
+@import '_components/_footer.scss';
+@import '_components/_pagination.scss';
+@import '_components/_related-posts.scss';
+@import '_components/_slider.scss';
+@import '_components/_code.scss';

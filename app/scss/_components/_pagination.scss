@@ -1,0 +1,22 @@
+// ==========================================================================
+// Pagination
+// ==========================================================================
+
+.navigation_pegination, .pagination {
+
+    .nav-links {
+        font-family: $body-font;
+
+        span.current {
+            background-color: $blue;
+        }
+    }
+}
+
+.navigation_pegination ul li.active a, 
+.navigation.pagination .nav-links span.current,
+.navigation_pegination ul li a:hover, 
+.navigation.pagination .nav-links span:hover, 
+.navigation.pagination .nav-links a:hover {
+    background-color: $blue;
+}

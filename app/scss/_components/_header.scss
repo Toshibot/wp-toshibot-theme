@@ -1,0 +1,51 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+
+header {
+
+    &.site-header {
+        background: $blue-dark;
+    }
+
+    .header {
+
+        &_social_search_wrap {
+            border-bottom: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background: transparent;
+
+            .search-form {
+                // display: none; // <-- Restore this
+            }
+        }
+
+        &_login_wrap {
+            float: left;
+            color: $offwhite;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 11px;
+            height: 25px;
+            line-height: 25px;
+
+            a {
+                color: $offwhite;
+
+                &:hover {
+                    @include transition(0.3s);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.search_header .search-form input[type=search] {
+    background: url('img/Find02.png') no-repeat right;
+
+    &:focus {
+        background: url('img/Find01.png') no-repeat right $white;
+    }
+}

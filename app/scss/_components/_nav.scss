@@ -1,0 +1,36 @@
+// ==========================================================================
+// Navigation
+// ==========================================================================
+
+.main-navigation {
+    margin-bottom: 0;
+}
+
+.main-navigation ul li:hover a, .main-navigation ul > li.menu-item-has-children:hover:after, .main-navigation ul > li.current-menu-item a, .main-navigation ul > li.current-menu-parent a, .main-navigation ul > li.current_page_item a {
+    color: $blue;
+}
+
+//
+// Post Nav
+// ==========================================================================
+
+.site-main .post-navigation .nav-links .nav-previous a, .site-main .post-navigation .nav-links .nav-next a {
+    background: transparent;
+    color: $black;
+    font-family: $heading;
+    font-size: 18px;
+    border: none;
+
+    &:hover, &:hover:before {
+        color: $blue;
+    }
+
+    &:before {
+        color: $black;
+        font-size: 16px;
+    }
+
+    &:after {
+        background: transparent;
+    }
+}

@@ -1,51 +1,82 @@
 // ==========================================================================
-// Custom Code/Pre Colors created with Google Code Prettify
+// Code / Pre
 // ==========================================================================
 
-@media print {
-  pre.prettyprint { background-color: none }
-  pre .str, code .str { color: #060 }
-  pre .kwd, code .kwd { color: #006; font-weight: bold }
-  pre .com, code .com { color: #600; font-style: italic }
-  pre .typ, code .typ { color: #404; font-weight: bold }
-  pre .lit, code .lit { color: #044 }
-  pre .pun, code .pun { color: #440 }
-  pre .pln, code .pln { color: #000 }
-  pre .tag, code .tag { color: #006; font-weight: bold }
-  pre .atn, code .atn { color: #404 }
-  pre .atv, code .atv { color: #060 }
-}
+pre {
 
-pre.prettyprint { 
-  display: block; 
-  background-color: #333;
-  border: medium none !important;
-  border-radius: 5px; moz-border-radius: 5px; -webkit-border-radius: 5px; 
-  font-size: 16px;
-}
-code.prettyprint { 
-  display: block; 
-  background-color: #333;
-  border: medium none !important;
-  border-radius: 5px; moz-border-radius: 5px; -webkit-border-radius: 5px; 
-  padding: 30px !important;
-  font-size: 16px;
-}
-pre .nocode { background-color: none; color: #000 }
-pre .str { color: #a3d9dc } /* string  - pink */
-pre .kwd { color: #cccc99; font-weight: normal } /* khaki */
-pre .com { color: #9da0a4 } /* comment - lightgrey */
-pre .typ { color: #e9919a } /* type    - coral */
-pre .lit { color: #e9919a } /* literal - coral */
-pre .pun { color: #fff }    /* punctuation */
-pre .pln { color: #fff }    /* plaintext */
-pre .tag { color: #e9919a; font-weight: normal } /* html/xml tag    - coral */
-pre .atn { color: #ffcc94; font-weight: normal } /* attribute name  - khaki */
-pre .atv { color: #cccc99 } /* attribute value - khaki */
-pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+    &.prettyprint {
+        padding: 0 !important;
+        @include borderRadius(0);
+        margin-top: 0;
 
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
-li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
-/* Alternate shading for lines */
-li.L1,li.L3,li.L5,li.L7,li.L9 { }
+        code {
+            padding: 0 $base $base !important;
+            display: inline-block;
+        }
+
+        // Code Heading
+        &:before {
+            content: 'CODE';
+            display: block;
+            color: $white;
+            width: 100%;
+            height: $base-lg;
+            line-height: $base-lg;
+            font-family: $heading-s;
+            padding-left: $base;
+        }
+
+        // Code Heading Languages
+        &.lang {
+
+            &-css {
+                &:before {
+                    content: 'CSS';
+                    background: $color-css;
+                }
+            }
+
+            &-scss {
+                &:before {
+                    content: 'SCSS';
+                    background: $color-sass;
+                }
+            }
+
+            &-sass {
+                &:before {
+                    content: 'SASS';
+                    background: $color-sass;
+                }
+            }
+
+            &-html {
+                &:before {
+                    content: 'HTML';
+                    background: $color-html;
+                }
+            }
+
+            &-php {
+                &:before {
+                    content: 'PHP';
+                    background: $color-php;
+                }
+            }
+
+            &-js {
+                &:before {
+                    content: 'JS';
+                    background: $color-js;
+                }
+            }
+
+            &-gulp {
+                &:before {
+                    content: 'gulpfile.js';
+                    background: $color-gulp;
+                }
+            }
+        }
+    }
+}

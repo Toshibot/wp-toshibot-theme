@@ -58,8 +58,8 @@ gulp.task('sass', function(){
 // Minify CSS
 gulp.task('minify-css', function() {
   return gulp.src('app/css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist/css'));
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest('dist'));
 });
 
 // Migrate CSS Plugins
@@ -119,7 +119,7 @@ gulp.task('fonts', function() {
 
 // Copy HTML to 'dist'
 gulp.task('html', function() {
-    return gulp.src(['app/*.{html,htm,php,css}'])
+    return gulp.src(['app/*.{html,htm,php}'])
         .pipe(gulp.dest('dist'));
 });
 
@@ -168,6 +168,7 @@ gulp.task('default', ['global-build-sequence'], function() {
 
     // Watch HTML, HTM and PHP files for Changes
     gulp.watch('app/*.{html,htm,php,png,css}', ['html']);
+    gulp.watch('app/**/*.php', ['template-parts']);
 
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('dist/css/*.css', browserSync.reload);

@@ -1,0 +1,31 @@
+.monash-m {
+
+    height: $header-height;
+    width: $content-width;
+    background: url('../img/monash-m.png') no-repeat top left;
+    background-size: 139px;
+    position: relative;
+    z-index: 0;
+    top: 0;
+    left: 3em;
+    margin: 0 auto;
+
+    &-container {
+        position: absolute;
+        top: 0;
+        height: $header-height;
+        width: 100%;
+    }
+}
+
+.single-post, .page {
+
+    .monash-m {
+        height: $header-height-s;
+        background-size: 86px;
+
+        &-container {
+            height: $header-height-s;
+        }
+    }
+}

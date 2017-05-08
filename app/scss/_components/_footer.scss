@@ -1,0 +1,59 @@
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+footer {
+    .site-info {
+        background: #333;
+    }
+
+    .footer_btm_right {
+        width: 100%;
+        text-align: right;
+        margin-bottom: $base-xl;
+
+        .move_to_top_bloger {
+            margin: 0;
+            right: $base-lg;
+            position: absolute;
+
+            &:hover {
+                background: $blue;
+                border-color: $blue;
+            }
+        }
+    }
+
+    .footer_social_icon_front {
+        border: none;
+    }
+
+    .footer_btm_left {
+
+        .footer-monash-logo {
+            width: 200px;
+        }
+
+        hr {
+            height: 2px;
+            border-color: $grey-dark;
+            background-color: $grey-dark;
+            margin: $base-lg 0;
+        }
+
+        ul {
+            margin-top: $base-lg;
+            padding-bottom: 80px;
+
+            li {
+                display: inline-block;
+                list-style: none;
+                font-family: $body-font;
+                color: $white;
+                font-size: 12px;
+                text-transform: uppercase;
+                padding: 0 10px;
+            }
+        }
+    }
+}

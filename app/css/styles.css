@@ -153,6 +153,8 @@ header .header_login_wrap {
   background: url("img/Find02.png") no-repeat right; }
   .search_header .search-form input[type=search]:focus {
     background: url("img/Find01.png") no-repeat right #fff; }
+  .search_header .search-form input[type=search]-media {
+    max-height: 400px !important; }
 
 .secondary .widget-title span {
   font-family: "Century Schoolbook", "TeX Gyre Schola", "TeX Gyre Schola Web", "Playfair Display", Georgia, "Times New Roman", Times, serif; }

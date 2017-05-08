@@ -2,6 +2,7 @@
 // Header
 // ==========================================================================
 
+
 header {
 
     &.site-header {
@@ -47,5 +48,9 @@ header {
 
     &:focus {
         background: url('img/Find01.png') no-repeat right $white;
+    }
+
+    &-media {
+        max-height: 400px !important;
     }
 }
